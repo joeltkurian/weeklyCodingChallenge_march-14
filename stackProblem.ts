@@ -9,8 +9,9 @@ class StackMan {
     }
     push(data: any) {
         this.stack.push(data);
-        if (this.largestVal < data)
-            this.largestVal = data;
+        let d = data.toString();
+        if (this.largestVal < d)
+            this.largestVal = d;
     }
     pop() {
         if (this.stack.length !== 0) return this.stack.pop();
