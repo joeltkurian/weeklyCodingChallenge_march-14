@@ -1,13 +1,12 @@
 
-
 class StackMan {
     stack: any[];
-    largestVal: any;
+    largestVal: string | number;
     constructor() {
         this.stack = [];
         this.largestVal = '';
     }
-    push(data: any) {
+    push(data: string | number) {
         this.stack.push(data);
         let d = data.toString();
         if (this.largestVal < d)
@@ -38,7 +37,3 @@ stackMan.pop();
 
 console.log(stackMan.max());
 console.log(stackMan.stackSize());
-
-
-
-
